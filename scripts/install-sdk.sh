@@ -106,7 +106,7 @@ NODE=node
 rm -rf ./build/standalone
 
 # pull the latest version
-updateCore || true
+#updateCore || true
 
 installGlobalDeps
 updateNodeModules
