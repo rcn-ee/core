@@ -203,7 +203,7 @@ Vfs.prototype._createEngine = function(vfs, options) {
         
         var transport = new smith.EngineIoTransport(socket, true);
         var worker = new VfsWorker(vfs);
-        worker.connectionTimeout = 30000;
+        worker.connectionTimeout = 40000;
         worker.connect(transport);
     
         worker.on("error", function (err) {

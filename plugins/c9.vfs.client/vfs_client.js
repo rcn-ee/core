@@ -309,7 +309,7 @@ define(function(require, exports, module) {
             showErrorTimer = null;
             
             consumer = new Consumer();
-            consumer.connectionTimeout = 5000;
+            consumer.connectionTimeout = 10000;
             consumer.connect(transport, function(err, _vfs) {
                 // TODO
                 if (err) {
