@@ -24,7 +24,7 @@ module.exports = function(manifest, installPath) {
     if (win32)
         readWin32Settings();
     
-    var home = process.env.HOME;
+    var home = "/opt/cloud9/";
     assert(home, "home directory must be set");
     
     if (!installPath)
@@ -39,7 +39,7 @@ module.exports = function(manifest, installPath) {
         standalone: true,
         startBridge: true,
         manifest: manifest,
-        workspaceDir: workspaceDir,
+        workspaceDir: "/var/lib/cloud9",
         projectName: path.basename(workspaceDir),
         homeDir: home,
         workspaceId: "devel",
@@ -50,13 +50,13 @@ module.exports = function(manifest, installPath) {
         dev: true,
         sdk: sdk,
         pid: process.pid,
-        port: process.env.PORT || 8181,
+        port: process.env.PORT || 3000,
         host: process.env.IP || (inContainer ? "0.0.0.0" : "127.0.0.1"),
         testing: false,
         platform: process.platform,
         arch: process.arch,
-        tmux: path.join(installPath, "bin/tmux"),
-        nakBin: path.join(__dirname, "../node_modules/nak/bin/nak"),
+        tmux: "/usr/bin/tmux",
+        nakBin: "/opt/cloud9/build/standalonebuild/node_modules/nak/bin/nak",
         bashBin: "bash",
         nodeBin: [path.join(installPath, win32 ? "node.exe" : "node/bin/node"), process.execPath],
         installPath: installPath,
@@ -71,7 +71,7 @@ module.exports = function(manifest, installPath) {
         homeUrl: "/home",
         collab: false,
         installed: true,
-        packed: false,
+        packed: true,
         packedThemes: true,
         readonly: false,
         role: "a",
