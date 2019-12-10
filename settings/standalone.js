@@ -58,7 +58,7 @@ module.exports = function(manifest, installPath) {
         tmux: "/opt/cloud9_support/bin/tmux",
         nakBin: "/opt/cloud9/build/standalonebuild/node_modules/nak/bin/nak",
         bashBin: "bash",
-        nodeBin: "/opt/cloud9_support/bin/node",
+        nodeBin: [path.join(installPath, win32 ? "node.exe" : "node/bin/node"), process.execPath],
         installPath: installPath,
         correctedInstallPath: correctedInstallPath,
         staticPrefix: "/static",
