@@ -1,6 +1,6 @@
 {
     "cmd": [
-        "node",
+        "/opt/cloud9_support/bin/node",
         "${debug?--nocrankshaft}",
         "${debug?--nolazy}",
         "${debug?`node --version | grep -vqE \"v0\\..\\.\" && echo --nodead_code_elimination`}",
