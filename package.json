@@ -21,7 +21,7 @@
         "engine.io-client": "1.6.11",
         "jsonm": "1.0.10",
         "http-error": "~0.0.5",
-        "less": "^2.4.0",
+        "less": "^3.10.3",
         "mime": "~1.2.9",
         "mkdirp": "~0.5.1",
         "msgpack-js-browser": "~0.1.4",
